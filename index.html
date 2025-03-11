@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/pokemon-1635610_640.png">
+</head>
+<body>
+    <div id="spinner" class="spinner">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    
+    <header>
+        <div class="header-container">
+            <img src="./img/pokemon-1635610_640.png" alt="Pokéball" class="pokeball-logo">
+            <h1 class="title">Pokedex</h1>
+        </div>
+    </header>    
+
+    <div class="search-container">
+        <input type="search" id="searchBar" placeholder="Search Pokemon..." oninput="searchPokemon()">
+    </div>    
+
+    <div id="pokemonList" class="pokemon-list"></div>
+
+    <div id="searchList" class="pokemon-list d-none"></div>
+
+    <button class="load-more-btn" id="loadMoreBtn" onclick="loadMorePokemon()">load more</button>
+
+    <div id="overlay" class="overlay d-none" onclick="closeOverlay(event)">
+        <div id="card-content"></div>
+        <button class="prev-card" onclick="prevCard(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e57640">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+        </button>
+        <button class="next-card" onclick="nextCard(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e57640">
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
+            </svg>
+        </button>
+    </div>    
+
+    <script src="fetchPokemon.js"></script>
+    <script src="generateHTML.js"></script>
+    <script src="displayPokemon.js"></script>
+    <script src="searchPokemon.js"></script>
+</body>
+</html>
