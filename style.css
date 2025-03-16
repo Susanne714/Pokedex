@@ -116,7 +116,7 @@ body{
 .pokemon-card.expanded .details {
     padding: 20px;
     background: #f0f0f0;
-    background-image: url('./img/stone-bg.jpg');
+    background: linear-gradient(223deg, #391e06 20%, #121211 60%);
     height: 45%;
 }
 .description-type{
