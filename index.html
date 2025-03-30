@@ -16,6 +16,11 @@
         <div class="header-container">
             <img src="./img/pokemon-1635610_640.png" alt="Pokéball" class="pokeball-logo">
             <h1 class="title">Pokedex</h1>
+            <img class="menu" src="./img/menu.png" alt="" onclick="openMenu()">
+        </div>
+        <div class="menu-popup" id="menu">
+             <img class="close" src="./img/close.png" alt="" onclick="closeMenu()">
+            <a href="./legal/legalNotice.html">Legal Notice</a>
         </div>
     </header>    
 
@@ -47,5 +52,6 @@
     <script src="generateHTML.js"></script>
     <script src="displayPokemon.js"></script>
     <script src="searchPokemon.js"></script>
+    <script src="utils.js"></script>
 </body>
 </html>
